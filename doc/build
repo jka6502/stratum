@@ -1,0 +1,12 @@
+#!/bin/bash
+cd "${0%/*}"
+
+if [ "$1" = "clean" ]; then
+	echo 'Cleaning docs'
+	rm -rf public
+	rm -rf *.html
+	rm -rf *.css
+else
+	echo 'Building docs'
+	docco -c custom/doc.css ../lib/* -o ./
+fi
