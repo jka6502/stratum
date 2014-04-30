@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CommonJS Module/1.1 unit tests</title>
+	
+
+		<link rel='stylesheet' href='base.css' />
+
+		<script src='https://rawgit.com/stacktracejs/stacktrace.js/master/stacktrace.js'></script>
+		<script src='../../../lib/require.js'></script>
+		<script src='../../../lib/require-debug.js'></script>
+
+
+		<script>
+			require('./rig');
+
+			commonjs.run('absolute');
+			commonjs.run('cyclic');
+			commonjs.run('determinism');
+			commonjs.run('exactExports');
+			commonjs.run('hasOwnProperty');
+			commonjs.run('method');
+			commonjs.run('missing');
+			commonjs.run('monkeys');
+			commonjs.run('nested');
+			commonjs.run('relative');
+			commonjs.run('transitive');
+		</script>
+
+
+	</head>
+	<body>
+		<div id='results'>
+			<h1>CommonJS module unit tests</h1>
+		</div>
+	</body>
+</html>

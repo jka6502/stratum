@@ -1,0 +1,8 @@
+* { font-family: Arial, Helvetica, Sans Serif; }
+
+.passed { color: green; }
+.failed { color: red; }
+
+h1 { font-size: 16px; }
+h3 { font-size: 12px; margin: 0px; }
+ul { font-size: 12px; margin: 0px 0px 8px 0px; }
