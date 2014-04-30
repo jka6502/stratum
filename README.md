@@ -17,9 +17,9 @@ The `require` function:
 * Passes CommonJS module unit tests (though two are in passed in error)
 
 The `define` function has the following properties:
-* Is compatible with [require.js](requirejs.org) [AMD](http://requirejs.org/docs/whyamd.html)
+* Is compatible with [require.js](http://requirejs.org) [AMD](http://requirejs.org/docs/whyamd.html)
 
 Both `require` and `define` are interoperable, and compatible with
-[require.js](requirejs.org)'s [r.js](https://github.com/jrburke/r.js)
+[require.js](http://requirejs.org)'s [r.js](https://github.com/jrburke/r.js)
 optimiser, to build production JavaScript.
 
