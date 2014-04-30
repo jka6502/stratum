@@ -1,6 +1,6 @@
 # Stratum
 
-The Stratum framework is a component library for web application development.
+A framework and component library for web application development.
 
 The primary purpose is to provide a small modular basis upon which to build web
 applications, providing modules to handle common glue functionality.
