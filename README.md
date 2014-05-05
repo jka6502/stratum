@@ -95,8 +95,8 @@ any functions or objects.
 
 ## Gotchas
 
-The browser is not really suited to the CommonJS require style, so there are
-some potential pitfalls/gotchas:
+The browser is not the ideal environment for the CommonJS require style, so
+there are some potential pitfalls in this implementation:
 
 - **Requiring a module that has not been loaded throws an exception.**
 
@@ -105,9 +105,16 @@ browser, but it has implications:
 
 Any `try{ ... }catch{ ... }` in the current stack trace will catch the
 *dependency abort* exception, that is used to halt script execution until
-dependencies have been resolved.  To avoid this, either filter any exceptions in
-your handler, by calling `require.filter(exception);` in your catch handler, or
-avoiding catching exceptions from your `require` calls entirely.
+dependencies have been resolved.
+
+To avoid this, either filter any exceptions in your handler, by calling
+`require.filter(exception);` in your catch handler, or avoiding catching
+exceptions from your `require` calls entirely.
+
+Note: For this reason, two of the tests in the CommonJS module test suite pass
+in error.  They catch the *'dependency abort'* exception, rather than the *'file
+missing'* one they expect.  They would actually pass, if they filtered out that
+exception, however.
 
 - **Code preceeding require calls may be executed multiple times**
 
@@ -120,14 +127,14 @@ invoke the *finally* clause zero or more times...
 - **Inline scripts are not necessarily sequenced**
 
 If a page contains multiple inline scripts, the order they are executed in will
-be indeterminate.
+be indeterminate (well, determinate, but according to complex rules).
 
-Any script containing one or more `require` calls may, or may not, cause
-execution of that script to be deferred until its dependencies have been
-satified.
+This is because any script containing one or more `require` calls may, or may
+not, cause execution of that script to be deferred, depending on whether its
+dependencies have already been handled.
 
 **Requiring in one inline script will not ensure dependencies are
-met before subsequent scripts are executed**.
+met before executing subsequent scripts**.
 
 - **Avoiding problems**
 
