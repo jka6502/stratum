@@ -137,8 +137,8 @@ file - which is generally good advice anyway.
 
 If you *absolutely must* mix logic and `require` calls, be careful to cache state
 globally to ensure the same path is taken if the logic is executed a second
-(or nth) time.  Basically, any logic preceeding your `require` calls must be
-idempotent - or odd things will happen.
+(or n<sup>th</sup>) time.  Basically, any logic preceeding your `require` calls
+must be idempotent - or odd things will happen.
 
 For inline scripts, each script tag has its own dependency chain, read it as the
 dictionary definition, if you require something in an inline script, you
