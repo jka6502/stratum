@@ -182,9 +182,8 @@ must be idempotent - or odd things will happen.
 For inline scripts, each script tag has its own dependency chain, read it as the
 dictionary definition, if you require something in an inline script, you
 **must** actually `require` it in that script, don't assume it is available.
-
-Finally, just don't add hard coupling between code in distinct inline script
-tags - its icky.
+Just don't add hard coupling between code in distinct inline script tags -
+its icky.
 
 
 ## Just... why?
