@@ -204,6 +204,43 @@ Global `module` and `exports` access issues can be alleviated by including
 require script in the page, but if possible, a simpler approach is to avoid
 reading from `module` or `exports` directly after initialisation.
 
+In summary
+
+**GOOD**
+``` JS
+(function() {
+
+	var something	= require('something'),
+		else		= require('some/module/else');
+
+	function Implementation() {}
+
+
+	Implementation.staticMethod = function() {
+		Implementation.blah();
+	};
+
+	module.exports = Implementation;
+
+})();
+```
+
+**BAD**
+``` JS
+console.log('Echo'); // Executed *at least* once... woo!
+try{
+	exports = {
+		other: require('some/other/module').feature;
+
+		closure: function() {
+			exports.other(); // Which 'exports' will this be?
+		}
+	};
+}catch(e) {
+	console.log('File missing: ' + e); // File missing: Dependency Abort
+}
+```
+
 
 ## Just... why?
 
