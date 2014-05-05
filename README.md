@@ -230,7 +230,7 @@ In summary
 console.log('Echo'); // Executed *at least* once... woo!
 try{
 	exports = {
-		other: require('some/other/module').feature;
+		other: require('some/other/module').feature,
 
 		closure: function() {
 			exports.other(); // Which 'exports' will this be?
@@ -238,6 +238,7 @@ try{
 	};
 }catch(e) {
 	console.log('File missing: ' + e); // File missing: Dependency Abort
+	// This will also prevent the 'next' file load being queued...
 }
 ```
 
