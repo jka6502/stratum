@@ -38,7 +38,7 @@ The `define` function has the following properties:
 To use Stratum, include the require script first:
 
 ``` HTML
-	<script src='relative/stratum/lib/require.js'></script>
+	<script src='./stratum/lib/require.js'></script>
 ```
 
 
@@ -52,8 +52,8 @@ Remember to leave off the *'.js'* suffix, this is a module path, not a file
 reference.
 
 
-Relative paths can also be used, using the *nix style `.` (current) and `..`
-(parent) prefixes for the module:
+Relative paths can also be used, using the *nix style `.` *(current)* and `..`
+*(parent)* prefixes for the module:
 
 ``` JS
 	var other = require('./some/other/module');
