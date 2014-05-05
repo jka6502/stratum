@@ -116,7 +116,7 @@ any functions or objects.
 The browser is not the ideal environment for the CommonJS require style, so
 there are some potential pitfalls in this implementation:
 
-- **Requiring a module that has not been loaded throws an exception.**
+- **Requiring a module that is not yet loaded throws an exception.**
 
 This is *the fundamental trickery* that makes the require function possible in
 the browser, but it has implications.
