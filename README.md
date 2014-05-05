@@ -211,7 +211,7 @@ In summary
 (function() {
 
 	var something	= require('something'),
-		else		= require('some/module/else');
+		other		= require('some/module/other');
 
 	function Implementation() {}
 
