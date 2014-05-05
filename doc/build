@@ -3,10 +3,10 @@ cd "${0%/*}"
 
 if [ "$1" = "clean" ]; then
 	echo 'Cleaning docs'
-	rm -rf public
-	rm -rf *.html
-	rm -rf *.css
+	rm -rf html/*
 else
 	echo 'Building docs'
-	docco -c custom/doc.css ../lib/* -o ./
+	mkdir ./html/annotated >/dev/null 2>/dev/null
+	docco -c source/css/source.css ../lib/* -o ./html/annotated/
+	docco -c source/css/site.css ./source/* -o ./html/
 fi
