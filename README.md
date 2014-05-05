@@ -119,10 +119,11 @@ exception, however.
 - **Code preceeding require calls may be executed multiple times**
 
 The exception abort/re-execute cycle also means that any code before, or between
-`require` calls will be executed multiple times.
+`require` calls can be executed multiple times, if the script aborts to load a
+dependency.
 
-Also, for this reason, wrapping a require in a `try{}finally{}` handler may well
-invoke the *finally* clause zero or more times...
+Also, for the same reason, wrapping a require in a `try{ ... }finally{ ... }`
+handler may well invoke the *finally* clause zero or more times...
 
 - **Inline scripts are not necessarily sequenced**
 
