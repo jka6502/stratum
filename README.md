@@ -145,7 +145,7 @@ So the following pattern should be avoided:
 </script>
 
 <script>
-	// Assume the above ensures the availability...
+	// Assume the above ensures availability...
 	something.confabulate();
 </script>
 ```
