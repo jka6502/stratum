@@ -188,16 +188,16 @@ its icky.
 
 ## Just... why?
 
-Why not use one of the existing module mechanisms that have sprung up for
-browser dependency management, you ask?
+Why not use one of the existing module loaders that tackle browser dependency
+management, you ask?
 
-Well, the answer is:
+Well, basically:
 
 * I enjoyed writing it
 * I hate the automagic and boilerplate required for mechanisms like AMD
-* I personally find this mechanism makes for simple, clean, readable code
-* I find build steps/manual dependency management slow down prototyping, and
-thereby inhibit my creativity
+* I personally find this approach makes for simple, clean, readable code
+* I find that build steps/manual dependency management slow down prototyping,
+and by doing so, inhibit my creativity and demotivate me
 * The gotchas listed above are easily avoided
 * I've convinced myself that anything that falls foul of the above is, in fact,
 a code smell anyway :-P
