@@ -11,7 +11,7 @@ modular inclusion functionality, in [require.js](./lib/require.js).
 
 The `require` function:
 * Is compatible with CommonJS Module/1.1
-* Works with `file:` protocol, for rapid prototyping
+* Works with the `file:` protocol, for rapid prototyping
 * Works with cross site urls
 * Retains correct file and line number mapping for debugging/error handling.
 * Is tested in a wide variety of browsers
