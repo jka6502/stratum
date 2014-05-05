@@ -98,7 +98,7 @@ any functions or objects.
 The browser is not really suited to the CommonJS require style, so there are
 some potential pitfalls/gotchas:
 
-### Requiring a module that has not been loaded throws an exception.
+- **Requiring a module that has not been loaded throws an exception.**
 
 This is the fundamental *trick* that makes the require function possible in the
 browser, but it has implications:
@@ -113,7 +113,7 @@ calling:
 
 in your catch handler.
 
-### Code preceeding require calls may be executed multiple times
+- **Code preceeding require calls may be executed multiple times**
 
 The exception abort/re-execute cycle also means that any code before, or between
 `require` calls will be executed multiple times.
@@ -121,7 +121,7 @@ The exception abort/re-execute cycle also means that any code before, or between
 Also, for this reason, wrapping a require in a
 `try{}finally{}` handler may well invoke the *finally* clause repeatedly.
 
-### Inline scripts are not necessarily sequenced
+- **Inline scripts are not necessarily sequenced**
 
 If a page contains multiple inline scripts, the order they are executed in will
 be indeterminate.
@@ -133,7 +133,7 @@ satified.
 Importantly, **requiring in one inline script will not ensure dependencies are
 met before subsequent scripts are executed**.
 
-### Avoiding problems
+- **Avoiding problems**
 
 All of the multi-execution issues can be overcome by just avoiding mixing logic
 with require calls - which is generally good advice anyway.
