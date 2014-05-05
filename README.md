@@ -215,9 +215,14 @@ In summary
 
 	function Implementation() {}
 
+	Implementation.prototype = {
 
-	Implementation.staticMethod = function() {
-		Implementation.blah();
+		other: other
+
+	};
+
+	Implementation.staticMethod = function(param) {
+		Implementation.blah(something(param));
 	};
 
 	module.exports = Implementation;
@@ -228,12 +233,15 @@ In summary
 **BAD**
 ``` JS
 console.log('Echo'); // Executed *at least* once... woo!
+
+var something = require('something'); // Globalised!
+
 try{
 	exports = {
 		other: require('some/other/module').feature,
 
-		closure: function() {
-			exports.other(); // Which 'exports' will this be?
+		closure: function(param) {
+			exports.other(something(param)); // Which 'exports' will this be?
 		}
 	};
 }catch(e) {
