@@ -100,8 +100,8 @@ there are some potential pitfalls in this implementation:
 
 - **Requiring a module that has not been loaded throws an exception.**
 
-This is the fundamental *trick* that makes the require function possible in the
-browser, but it has implications:
+This is *the fundamental trickery* that makes the require function possible in
+the browser, but it has implications.
 
 Any `try{ ... }catch{ ... }` in the current stack trace will catch the
 *dependency abort* exception, that is used to halt script execution until
