@@ -132,7 +132,7 @@ be indeterminate (well, determinate, but according to complex rules).
 
 This is because any script containing one or more `require` calls may, or may
 not, cause execution of that script to be deferred, depending on whether its
-dependencies have already been handled.
+dependencies have already been satisfied.
 
 **Requiring in one inline script will not ensure dependencies are
 met before executing subsequent scripts**.
