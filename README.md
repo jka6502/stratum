@@ -197,8 +197,8 @@ Well, the answer is:
 * I enjoyed writing it
 * I hate the automagic and boilerplate required for mechanisms like AMD
 * I personally find this mechanism makes for simple, clean, readable code
-* I find build steps slow prototyping, and thereby inhibit my creativity
+* I find build steps/manual dependency management slow down prototyping, and
+thereby inhibit my creativity
 * The gotchas listed above are easily avoided
 * I've convinced myself that anything that falls foul of the above is, in fact,
 a code smell anyway :-P
-* I find this mechanism much, much faster for prototyping
