@@ -126,7 +126,7 @@ Any script containing one or more `require` calls may, or may not, cause
 execution of that script to be deferred until its dependencies have been
 satified.
 
-Importantly, **requiring in one inline script will not ensure dependencies are
+**Requiring in one inline script will not ensure dependencies are
 met before subsequent scripts are executed**.
 
 - **Avoiding problems**
@@ -143,6 +143,8 @@ idempotent - or odd things will happen.
 For inline scripts, each script tag has its own dependency chain, read it as the
 dictionary definition, if you require something in an inline script, you
 **must** actually `require` it in that script, don't assume it is available.
+
+Finally, just don't add hard coupling between distinct inline script tags.
 
 
 ## Just... why?
