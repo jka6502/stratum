@@ -13,8 +13,9 @@ modular inclusion functionality, in [require.js](./lib/require.js).
 * [Modularity](#modularity)
 * [Quickstart](#quickstart)
 * [Production](#production)
+* [Testing](#testing)
 * [Gotchas](#gotchas)
-* [Philosophy](#just-why?)
+* [Philosophy](#just-why)
 
 
 ## Modularity
