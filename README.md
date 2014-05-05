@@ -7,6 +7,13 @@ Designed to provide a small modular basis upon which to build web applications.
 To this end, the whole framework is built around a single core mechanism, the
 modular inclusion functionality, in [require.js](./lib/require.js).
 
+* [Modularity](#Modularity)
+* [Quickstart](#Quickstart)
+* [Production](#Production)
+* [Gotchas](#Gotchas)
+* [Philosophy](#Just... why?)
+
+
 ## Modularity
 
 The `require` function:
@@ -15,7 +22,8 @@ The `require` function:
 * Works with cross site urls
 * Retains correct file and line number mapping for debugging/error handling.
 * Is tested in a wide variety of browsers
-* Passes CommonJS module unit tests (though two are in passed in error)
+* Passes CommonJS module unit tests (though two are in passed in error, see
+[Gotchas](#Gotchas) for details)
 
 The `define` function has the following properties:
 * Is compatible with [require.js](http://requirejs.org)
