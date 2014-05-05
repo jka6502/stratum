@@ -7,11 +7,14 @@ Designed to provide a small modular basis upon which to build web applications.
 To this end, the whole framework is built around a single core mechanism, the
 modular inclusion functionality, in [require.js](./lib/require.js).
 
-* [Modularity](#Modularity)
-* [Quickstart](#Quickstart)
-* [Production](#Production)
-* [Gotchas](#Gotchas)
-* [Philosophy](#Just... why?)
+
+## Contents
+
+* [Modularity](#modularity)
+* [Quickstart](#quickstart)
+* [Production](#production)
+* [Gotchas](#gotchas)
+* [Philosophy](#just-why?)
 
 
 ## Modularity
