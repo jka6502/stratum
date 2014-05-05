@@ -44,9 +44,8 @@ Remember to leave off the *'.js'* suffix, this is a module path, not a file
 reference.
 
 
-Relative paths can also be used, using the *nix style `.` (current) and
-
-`..` (parent) prefixes for the module:
+Relative paths can also be used, using the *nix style `.` (current) and `..`
+(parent) prefixes for the module:
 
 ``` JS
 	var other = require('./some/other/module');
