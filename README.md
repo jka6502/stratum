@@ -94,7 +94,7 @@ format, by using
 
 ## Testing
 
-[Open the CommonJS test suite rig](./test/require/commonjs/index.html) to run
+[Open the CommonJS test suite page](./test/require/commonjs/index.html) to run
 the tests. Remember to checkout the submodules required first in
 [vendor](./vendor).
 
