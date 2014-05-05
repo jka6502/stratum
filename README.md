@@ -70,6 +70,16 @@ Requiring modules even works in *inline* script tags!
 ```
 
 
+## Production
+
+This code is designed to facilitate faster building of applications.  It is
+pretty thoroughly tested and works in a wide variety of environments, but it is
+not designed to be used in production.
+
+In production environments, you can bake your scripts into a universally usable
+format, by using
+[Browserify](https://github.com/substack/node-browserify).
+
 ## Testing
 
 [Open the CommonJS test suite rig](./test/require/commonjs/index.html) to run
