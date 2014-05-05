@@ -103,23 +103,19 @@ some potential pitfalls/gotchas:
 This is the fundamental *trick* that makes the require function possible in the
 browser, but it has implications:
 
-Any `try{}catch{}` in the current stack trace will catch the *dependency abort*
-exception, that is used to halt script execution until dependencies have been
-resolved.  To avoid this, either filter any exceptions in your handler, by
-calling:
-``` JS
-	require.filter(exception);
-```
-
-in your catch handler.
+Any `try{ ... }catch{ ... }` in the current stack trace will catch the
+*dependency abort* exception, that is used to halt script execution until
+dependencies have been resolved.  To avoid this, either filter any exceptions in
+your handler, by calling `require.filter(exception);` in your catch handler, or
+avoiding catching exceptions from your `require` calls entirely.
 
 - **Code preceeding require calls may be executed multiple times**
 
 The exception abort/re-execute cycle also means that any code before, or between
 `require` calls will be executed multiple times.
 
-Also, for this reason, wrapping a require in a
-`try{}finally{}` handler may well invoke the *finally* clause repeatedly.
+Also, for this reason, wrapping a require in a `try{}finally{}` handler may well
+invoke the *finally* clause zero or more times...
 
 - **Inline scripts are not necessarily sequenced**
 
@@ -136,9 +132,10 @@ met before subsequent scripts are executed**.
 - **Avoiding problems**
 
 All of the multi-execution issues can be overcome by just avoiding mixing logic
-with require calls - which is generally good advice anyway.
+with require calls, and requiring any dependencies at the top/start of any
+file - which is generally good advice anyway.
 
-If you absolutely must mix logic and `require` calls, be careful to cache state
+If you *absolutely must* mix logic and `require` calls, be careful to cache state
 globally to ensure the same path is taken if the logic is executed a second
 (or nth) time.  Basically, any logic preceeding your `require` calls must be
 idempotent - or odd things will happen.
