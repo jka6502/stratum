@@ -137,6 +137,19 @@ dependencies have already been satisfied.
 **Requiring in one inline script will not ensure dependencies are
 met before executing subsequent scripts**.
 
+So the following pattern should be avoided:
+
+``` HTML
+<script>
+	var something = require('something');
+</script>
+
+<script>
+	// Assume the above ensures the availability...
+	something.confabulate();
+</script>
+```
+
 - **Avoiding problems**
 
 All of the multi-execution issues can be overcome by just avoiding mixing logic
