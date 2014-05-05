@@ -21,10 +21,6 @@ The `define` function has the following properties:
 * Is compatible with [require.js](http://requirejs.org)
 [AMD](http://requirejs.org/docs/whyamd.html)
 
-Both `require` and `define` are interoperable, and compatible with
-[require.js](http://requirejs.org)'s [r.js](https://github.com/jrburke/r.js)
-optimiser, to build production JavaScript.
-
 ## Quickstart
 
 To use Stratum, include the require script first:
