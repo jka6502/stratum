@@ -108,9 +108,9 @@ execution of a module, due to the design of the CommonJS unit tests.
 Although possible in the browser, through some arcane trickery, this practise is
 rather unintuitive - it makes assumptions about a global variable reacting
 differently depending on the source file it is referenced in.  It is better to
-wrap a module in a function scope (you are doing that anyway, aren't you?), and
+wrap a module in a function scope (you are doing that anyway, aren't you?),
 use local variables to maintain internal relationships, then explicitly export
-any functions or objects.
+any functions or objects required.
 
 
 ## Gotchas
@@ -128,7 +128,7 @@ Any `try{ ... }catch{ ... }` in the current stack will catch the
 dependencies have been resolved.
 
 To avoid this, either filter any exceptions caught, by calling
-`require.filter(exception);` in your handler, or avoiding catching exceptions
+`require.filter(exception);` in your handler, or avoid catching exceptions
 from your `require` calls entirely.
 
 Note: For this reason, two of the tests in the CommonJS module test suite pass
