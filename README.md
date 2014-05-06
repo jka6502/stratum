@@ -26,7 +26,7 @@ The `require` function:
 * Works with cross site urls
 * Retains correct file and line number mapping for debugging/error handling.
 * Is tested in a wide variety of browsers
-* Passes CommonJS module unit tests (though two are in passed in error, see
+* Passes CommonJS module unit tests (though two are passed in error, see
 [Gotchas](#Gotchas) for details)
 
 The `define` function:
