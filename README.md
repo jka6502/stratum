@@ -143,7 +143,7 @@ The exception abort/re-execute cycle also means that any code before, or between
 dependency.
 
 Also, for the same reason, wrapping a require in a `try{ ... }finally{ ... }`
-handler may well invoke the *finally* clause zero or more times...
+handler may well invoke the *finally* clause one or more times...
 
 - **Inline scripts are not necessarily sequenced**
 
