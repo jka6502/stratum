@@ -1,0 +1,6 @@
+[submodule "vendor/commonjs"]
+	path = vendor/commonjs
+	url = https://github.com/commonjs/commonjs.git
+[submodule "vendor/stacktrace"]
+	path = vendor/stacktrace
+	url = https://github.com/stacktracejs/stacktrace.js.git
