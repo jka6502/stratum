@@ -133,8 +133,8 @@ from your `require` calls entirely.
 
 Note: For this reason, two of the tests in the CommonJS module test suite pass
 in error.  They catch the *'dependency abort'* exception, rather than the *'file
-missing'* exception they expect.  Those tests would actually pass, if they
-filtered out that exception, however.
+missing'* exception they expect.  However, those tests would actually pass, if
+they filtered out that exception.
 
 - **Code preceeding require calls may be executed multiple times**
 
