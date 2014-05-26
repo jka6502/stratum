@@ -79,6 +79,17 @@
 			set.has('test').should.be.true;
 		});
 
+		it('should be able to create an array of contained values', function() {
+			var source	= [2, 1, {}, 'test', false],
+				index	= 0,
+				set		= new Set(source),
+				values	= set.toArray();
+
+			for(var index = 0, length = values.length; index < length; index++) {
+				values[index].should.be.exactly(source[index]);
+			}
+		});
+
 	});
 
 

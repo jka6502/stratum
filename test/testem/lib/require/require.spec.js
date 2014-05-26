@@ -17,7 +17,8 @@
 		exports:	trapped('./basic/exports'),
 		module:		trapped('./basic/module'),
 		equivalent:	trapped('./basic/equivalent'),
-		id:			trapped('./basic/id')
+		id:			trapped('./basic/id'),
+		missing:	trapped('./basic/missing')
 	};
 
 	var absolute = {
@@ -59,6 +60,9 @@
 			basic.id.should.equal('id');
 		});
 
+		it('should throw when a file is missing', function() {
+			(function() { require('./basic/missing') }).should.throw();
+		});
 
 		describe('with absolute paths', function() {
 

@@ -2,7 +2,8 @@
 
 	require('structure/iterator');
 
-	var Map = require('structure/map');
+	var Map			= require('structure/map'),
+		iterator	= require('structure/iterator');
 
 
 	describe('Map shim', function() {
@@ -173,6 +174,16 @@
 			map.get(host).should.equal('a');
 		});
 
+		it('should treat -0 as equal to +0', function() {
+			var map = new Map([[-0, 'a']]);
+			map.size.should.equal(1);
+			map.has(-0).should.be.true;
+			map.has(0).should.be.true;
+
+			map.get(-0).should.equal('a');
+			map.get(0).should.equal('a');
+		});
+
 		it('should has() the things it actually contains', function() {
 			var mine = {blah: 7};
 
@@ -260,7 +271,7 @@
 				values	= map.keys();
 
 			for(var next = values.next(); !next.done; next = values.next()) {
-				next.value.should.equal(source[index++][0]);
+				next.value.should.be.exactly(source[index++][0]);
 			}
 		});
 
@@ -271,8 +282,8 @@
 				values	= map.entries();
 
 			for(var next = values.next(); !next.done; next = values.next()) {
-				next.value[0].should.equal(source[index][0]);
-				next.value[1].should.equal(source[index++][1]);
+				next.value[0].should.be.exactly(source[index][0]);
+				next.value[1].should.be.exactly(source[index++][1]);
 			}
 		});
 
@@ -280,11 +291,11 @@
 			var source	= [[2, 1], [1, 2], [{}, 3], ['test', 4]],
 				index	= 0,
 				map		= new Map(source),
-				values	= map.iterator();
+				values	= iterator(map);
 
 			for(var next = values.next(); !next.done; next = values.next()) {
-				next.value[0].should.equal(source[index][0]);
-				next.value[1].should.equal(source[index++][1]);
+				next.value[0].should.be.exactly(source[index][0]);
+				next.value[1].should.be.exactly(source[index++][1]);
 			}
 		});
 
@@ -295,8 +306,8 @@
 				values	= map.toArray();
 
 			for(var index = 0, length = values.length; index < length; index++) {
-				values[index][0].should.equal(source[index][0]);
-				values[index][1].should.equal(source[index][1]);
+				values[index][0].should.be.exactly(source[index][0]);
+				values[index][1].should.be.exactly(source[index][1]);
 			}
 		});
 
