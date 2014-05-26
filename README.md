@@ -1,5 +1,7 @@
 # Stratum
 
+[![NPM version](https://badge.fury.io/js/stratum-framework.svg)](http://badge.fury.io/js/stratum-framework)
+
 A framework and component library for web application development.
 
 Designed to provide a small modular basis upon which to build web applications.
