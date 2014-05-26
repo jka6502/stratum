@@ -93,10 +93,7 @@
 
 
 	var Loader	= stratum.classes.Loader,
-		loader	= Loader.current;
-
-
-	commonjs.cache = {};
+		loader	= Loader.default;
 
 
 	// The actual test harness, create a sub Loader seeded with the relevant
@@ -104,21 +101,13 @@
 	commonjs.run = function run(base) {
 		commonjs.start(base);
 
-		var id		= '_' + base,
-			local;
-
-		if (commonjs.cache[id]) {
-			local = commonjs.cache[id];
-		}else{
-			var path = TEST_PATH + base + '/';
-			local = loader.clone({
-				paths: [path]
-			});
-			commonjs.cache[id] = local;
-		}
-
-		local.use();
-		require('program');
+		var path = TEST_PATH + base + '/';
+		
+		loader.clone({
+			paths: [path]
+		}).use(function() {
+			require('program');
+		});
 	}
 
 

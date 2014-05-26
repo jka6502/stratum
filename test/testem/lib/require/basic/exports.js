@@ -1,0 +1,7 @@
+(function() {
+
+
+	exports = 'exports';
+
+
+})();

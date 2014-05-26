@@ -94,7 +94,18 @@ In production environments, you can bake your scripts into a safe, universally
 compatible format, using
 [Browserify](https://github.com/substack/node-browserify).
 
+
 ## Testing
+
+To run the supplied test suite:
+
+``` Bash
+npm install
+npm test
+```
+
+
+## Testing with CommonJS
 
 [Open the CommonJS test suite page](./test/require/commonjs/index.html) to run
 the tests. Remember to checkout the submodules required first in

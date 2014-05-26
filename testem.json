@@ -1,0 +1,11 @@
+{
+	"framework":	"jasmine",
+
+	"src_files":	[
+		"lib/require.js",
+		"./node_modules/should/should.min.js",
+ 
+		"test/testem/**/*.spec.js"
+	]
+
+}
