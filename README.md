@@ -13,7 +13,8 @@ modular inclusion functionality, in [require.js](./lib/require.js).
 ## Contents
 
 * [Modularity](#modularity)
-* [Quickstart](#quickstart)
+* [Install](#install)
+* [Modularity](#modularity)
 * [Production](#production)
 * [Testing](#testing)
 * [Gotchas](#gotchas)
@@ -36,6 +37,19 @@ The `define` function:
 [AMD](http://requirejs.org/docs/whyamd.html)
 * Is probably best suited to providing *mock* modules for testing purposes!
 
+## Install
+
+Either directly through git:
+
+``` Bash
+git clone https://github.com/jka6502/stratum.git
+```
+
+Or via npm:
+
+``` Bash
+npm install stratum-framework
+```
 
 ## Quickstart
 
