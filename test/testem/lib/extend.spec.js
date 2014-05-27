@@ -63,7 +63,7 @@
 
 			var mine = {};
 
-			extend(Test1, { get foo() { return mine; }});
+			extend(Test1, { get foo() { return mine; }, set foo(value) {} });
 			var instance = new Test1();
 			instance.foo.should.be.exactly(mine);
 			instance.foo = 2;
