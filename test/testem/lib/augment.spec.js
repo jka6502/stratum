@@ -43,7 +43,7 @@
 			a.bar.should.equal(1);
 		});
 
-		it('Should not be dumb, with no regard to prototypes/constructors', function() {
+		it('Should be dumb, with no regard for prototypes, constructors', function() {
 			function Test1() {}
 			function Test2() {}
 			Test1.a = 'test';

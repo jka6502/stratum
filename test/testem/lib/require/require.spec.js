@@ -41,7 +41,7 @@
 	};
 
 
-	describe('require()', function() {
+	describe('require', function() {
 
 
 		it('should support global exports', function() {

@@ -1,26 +1,24 @@
 {
   "name": "stratum-framework",
   "preferGlobal": false,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "James Andrews <jka6502@gmail.com>",
-  "description": "a core framework for web applications",
+  "description": "a framework for web application development",
   "scripts": {
-    "test": "./node_modules/.bin/testem --launch phantomjs"
+    "test": "./node_modules/.bin/testem -f test/testem/testem.json --launch phantomjs"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jka6502/stratum.git"
   },
-  "main": "./lib/require",
   "keywords": [
     "javascript",
     "web",
     "framework",
     "require"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "jasmine-node": "1.x.x",
+    "mocha": "^1.20.0",
     "phantomjs": "1.x.x",
     "should": "3.x.x",
     "testem": "0.6.x"

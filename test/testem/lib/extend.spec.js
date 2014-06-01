@@ -7,7 +7,7 @@
 	describe('extend', function() {
 
 
-		it('exists when required', function() {
+		it('should exist when required', function() {
 			(extend == null).should.be.false;
 			extend.should.be.a.Function;
 		});
