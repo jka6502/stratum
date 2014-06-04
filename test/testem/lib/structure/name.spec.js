@@ -4,7 +4,7 @@
 	var Name = require('structure/name');
 
 
-	describe('Name', function() {
+	describe('name', function() {
 
 
 		it('should be defined when required', function() {

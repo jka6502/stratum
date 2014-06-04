@@ -8,7 +8,7 @@
 		Map	= require('structure/map');
 
 
-	describe('Set shim', function() {
+	describe('set', function() {
 
 
 		it('should be defined if required', function() {

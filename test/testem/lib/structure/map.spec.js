@@ -6,7 +6,7 @@
 		iterator	= require('structure/iterator');
 
 
-	describe('Map shim', function() {
+	describe('map', function() {
 
 
 		it('should be defined if required', function() {
