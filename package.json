@@ -1,7 +1,7 @@
 {
   "name": "stratum-framework",
   "preferGlobal": false,
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": "James Andrews <jka6502@gmail.com>",
   "description": "a framework for web application development",
   "scripts": {
